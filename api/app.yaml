@@ -1,0 +1,14 @@
+runtime: nodejs
+
+env: flex
+
+env_variables:
+  HOST: '34.68.102.155'
+  NODE_ENV: 'production'
+  DATABASE_NAME: 'intrinsic_db'
+  DATABASE_USER: 'strapi_user'
+  DATABASE_PASSWORD: 'N33d2wrk'
+  INSTANCE_CONNECTION_NAME: 'intrinsic-app:us-central1:intinsic-db'
+
+beta_settings:
+  cloud_sql_instances: 'intrinsic-app:us-central1:intinsic-db'
