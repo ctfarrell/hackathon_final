@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "swags",
+  "info": {
+    "singularName": "swag",
+    "pluralName": "swags",
+    "displayName": "Swag",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "swagName": {
+      "type": "string",
+      "required": true
+    },
+    "swagType": {
+      "type": "enumeration",
+      "enum": [
+        "shirt",
+        "hoodie",
+        "hat",
+        "pants",
+        "jacket"
+      ],
+      "required": true
+    },
+    "swagPng": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "swagDescription": {
+      "type": "richtext"
+    },
+    "swagSellable": {
+      "type": "boolean"
+    },
+    "swagId": {
+      "type": "uid",
+      "required": true,
+      "targetField": "swagName"
+    }
+  }
+}

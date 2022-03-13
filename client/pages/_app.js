@@ -4,6 +4,8 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import "tailwindcss/tailwind.css";
 import { getStrapiURL } from "../utils";
 import { getLocalizedParams } from "../utils/localize";
+import { ChakraProvider } from '@chakra-ui/react'
+
 
 const queryClient = new QueryClient();
 
@@ -15,9 +17,11 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <QueryClientProvider client={queryClient}>
-        <Component {...pageProps} />
-      </QueryClientProvider>
+      <ChakraProvider>
+        <QueryClientProvider client={queryClient}>
+          <Component {...pageProps} />
+        </QueryClientProvider>  
+      </ChakraProvider>
     </>
   );
 }

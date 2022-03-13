@@ -116,6 +116,38 @@ export async function getRestaurants(key) {
   };
 }
 
+export async function getSwag(swagId) {
+  let baseUrl = getStrapiURL(
+    `/swags?filters[swagId]$eq=${swagId}&populate=*`
+  )
+  const res = await fetch(baseUrl);
+  const swag = await res.json();
+
+  return {
+    swag: swag.data,
+  }
+}
+
+export async function getSwags() {
+
+  let baseUrl = getStrapiURL(
+    `/swags?pagination[limit]=10&pagination[start]=0&pagination[withCount]=true&populate=*`
+  );
+/*
+  if (categoryName) {
+    baseUrl = `${baseUrl}&filters[category][name][$eq]=${categoryName}`;
+  }
+  */
+
+  const res = await fetch(baseUrl);
+  const swag = await res.json();
+
+  return {
+    swags: swag.data,
+    count: swag.meta.pagination.total,
+  };
+}
+
 export async function getArticles(key) {
   const categoryName = key.queryKey[1].category;
   const localeCode = key.queryKey[2].locale;

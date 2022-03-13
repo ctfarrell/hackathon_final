@@ -10,7 +10,7 @@ import Header from "../../components/shared/Header";
 import { getData, getRestaurants, getStrapiURL } from "../../utils";
 import { getLocalizedParams } from "../../utils/localize";
 
-const Restaurants = ({
+const Swag = ({
   global,
   initialData,
   pageData,
@@ -213,4 +213,4 @@ export async function getServerSideProps(context) {
   }
 }
 
-export default Restaurants;
+export default Swag;

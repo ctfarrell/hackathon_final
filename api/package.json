@@ -20,6 +20,7 @@
     "fs-extra": "^10.0.0",
     "lodash": "^4.17.21",
     "lodash.set": "^4.3.2",
+    "pg": "^8.7.3",
     "sqlite3": "5.0.2",
     "unzip-stream": "^0.3.1",
     "uuid-v4": "^0.1.0"
@@ -28,7 +29,7 @@
     "name": "A Strapi developer"
   },
   "strapi": {
-    "uuid": "092c44de-692e-4d21-acfa-ed40a3fe01a9"
+    "uuid": "FOODADVISOR-LOCAL-169f660b-fe9d-4b3a-8db7-bc17892f07b4"
   },
   "engines": {
     "node": ">=12.x.x <=16.x.x",
