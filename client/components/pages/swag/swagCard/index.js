@@ -50,10 +50,10 @@ import {
                 filter: 'blur(20px)',
               },
             }}>
-            <Image
+            <Image mx={"auto"}
               rounded={'lg'}
-              height={230}
-              width={282}
+              height={250}
+              width={250}
               objectFit={'cover'}
               src={thumbnail}
             />

@@ -26,7 +26,7 @@ const { data, isLoading, error, status } = useQuery(['swags'],
     //const swagItems = data? data.swags.map(function(swag){return <li key = {swag.ID}>{swag.swagName}</li>}) : <li key = {1}>loading...</li>
   return (
     <Layout>
-        <SimpleGrid columns = {3}>
+        <SimpleGrid mt = {6} columns = {3}>
         {isLoading? (<GridItem>loading data</GridItem>): (data.swags.map(function(swag){return <SwagCard key = {swag.id} swagItem = {swag}/>}))}
         </SimpleGrid>
     </Layout>

@@ -37,8 +37,8 @@ import {
               src={thumbnail}
               fit={'cover'}
               align={'center'}
-              w={'100%'}
-              h={{ base: '100%', sm: '400px', lg: '500px' }}
+              w={{ base: '90%', sm: '400px', lg: '500px' }}
+              h={{ base: '90%', sm: '400px', lg: '500px' }}
             />
           </Flex>
           <Stack spacing={{ base: 6, md: 10 }}>

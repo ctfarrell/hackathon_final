@@ -9,14 +9,14 @@ import Header from "../../components/shared/Header";
 import { getData, getRestaurants, getStrapiURL } from "../../utils";
 import { getLocalizedParams } from "../../utils/localize";
 import Layout from "../../components/layout";
-import { getSwags, initialData } from "../../utils";
+import { getExperiences, initialData } from "../../utils";
 import { GridItem, SimpleGrid } from "@chakra-ui/react";
-import SwagCard from "../../components/pages/swag/swagCard";
+import ExperienceCard from "../../components/pages/experiences/experienceCard.js";
 
 
 export default function index() {
-const { data, isLoading, error, status } = useQuery(['swags'],
-    getSwags,
+const { data, isLoading, error, status } = useQuery(['exps'],
+    getExperiences,
     {
         initialData,
     }
@@ -26,9 +26,9 @@ const { data, isLoading, error, status } = useQuery(['swags'],
     //const swagItems = data? data.swags.map(function(swag){return <li key = {swag.ID}>{swag.swagName}</li>}) : <li key = {1}>loading...</li>
   return (
     <Layout>
-        <SimpleGrid columns = {2}>
-        {isLoading? (<GridItem>loading data</GridItem>): (data.swags.map(function(swag){return <div>Cool Experience 1</div>}))}
-        </SimpleGrid>
+        <SimpleGrid mt = {'10'} columns = {2}>
+        {isLoading? (<GridItem>loading data</GridItem>): (data.experiences.map(function(exp){return <ExperienceCard key = {exp.id} expData = {exp}/>}))}
+</SimpleGrid>
     </Layout>
   )
 }
