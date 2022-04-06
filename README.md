@@ -31,7 +31,7 @@ Checkout the [client readme](https://github.com/ctfarrell/hackathon_final/tree/m
 We used a ton of neat open source :rocket: technology for our project!
  * [Strapi](https://strapi.io/) was our backend framework, and we used their demo [FoodAdvisor](https://github.com/strapi/foodadvisor) app as a starting point :ice_cream: 
  * [NextJS](https://nextjs.org/) - was our frontend framework, and allowed us to hide some of our backend services in their handy API routes :briefcase: 
- * [Chakra UI](https://chakra-ui.com/) - We replaced the TailwindCSS in the FoodAdvisor demo app with Chakra to move a bit quicker and we didn't have a designer so using Chakra out of the box :ballot_box_with_ballot: made more sense. 
+ * [Chakra UI](https://chakra-ui.com/) - We replaced the TailwindCSS in the FoodAdvisor demo app with Chakra to move a bit quicker and we didn't have a designer so using Chakra out of the box made more sense. 
  * [Heroku](https://www.heroku.com/) - Heroku was a super easy place to launch a fullstack node application. They only charged me 3.25 for two hobby level dynos for a couple of weeks! :sunglasses: 
  * [Google Cloud Storage](https://cloud.google.com/storage) - I had to create a storage bucket with google to keep / serve some of our image assets. :golf: 
  * [Ethers JS](https://docs.ethers.io/v5/) - continues to check all of the boxes :ballot_box_with_check: for working with EVM based blockchains
