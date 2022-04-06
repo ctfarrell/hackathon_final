@@ -21,10 +21,17 @@ import {
     ChevronDownIcon,
     ChevronRightIcon,
   } from '@chakra-ui/icons';
+import ModelConnect from './modelConnect';
+import { useEagerConnect } from "../../../utils/hooks";
+import Web3Connect from './web3Connect';
+import Image from 'next/image'
+//import intrinsicLogo from "../../../public/intrinsic-logo.png"
+
   
-  export default function WithSubnavigation() {
+  export default function WithSubnavigation(props) {
     const { isOpen, onToggle } = useDisclosure();
-  
+    const triedToEagerConnect = useEagerConnect()
+
     return (
       <Box>
         <Flex
@@ -51,12 +58,12 @@ import {
             />
           </Flex>
           <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-            <Text
-              textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
-              fontFamily={'heading'}
-              color={useColorModeValue('gray.800', 'white')}>
-              Logo
-            </Text>
+            <Box height={8}>
+              <Link href="/">
+                <Image src = "/logoWide.png" alt="logo" layout='intrinsic' width = {100} height = {30}/>
+              </Link>
+            </Box>
+
   
             <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
               <DesktopNav />
@@ -68,26 +75,7 @@ import {
             justify={'flex-end'}
             direction={'row'}
             spacing={6}>
-            <Button
-              as={'a'}
-              fontSize={'sm'}
-              fontWeight={400}
-              variant={'link'}
-              href={'#'}>
-              Sign In
-            </Button>
-            <Button
-              display={{ base: 'none', md: 'inline-flex' }}
-              fontSize={'sm'}
-              fontWeight={600}
-              color={'white'}
-              bg={'pink.400'}
-              href={'#'}
-              _hover={{
-                bg: 'pink.300',
-              }}>
-              Sign Up
-            </Button>
+            <Web3Connect/>
           </Stack>
         </Flex>
   
@@ -242,6 +230,12 @@ import {
     );
   };
 
+  export async function getStaticProps(context) {
+    return {
+      props: {}, // will be passed to the page component as props
+    }
+  }
+
   
   const NAV_ITEMS = [
     {
@@ -253,7 +247,7 @@ import {
       href: '/swag',
     },
     {
-        label: 'Blog',
-        href: '/blog',
+        label: 'Hackathon',
+        href: '/hackathon',
       },
   ];

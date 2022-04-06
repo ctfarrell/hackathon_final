@@ -1,6 +1,5 @@
 import {
     Box,
-    chakra,
     Container,
     Stack,
     Text,
@@ -18,18 +17,20 @@ import {
   } from '@chakra-ui/react';
   import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
   import { MdLocalShipping } from 'react-icons/md';
+  import { getGoogleMedia } from '../../../../utils';
+import ColorPicker from './colorPicker';
+import FileUpload from './fileUpload';
   
   export default function SwagCustomize(content) {
     console.log("swag customize: ", content)
-    const url_starter = "http://localhost:1337"
-    const thumbnail =  url_starter +  content?.content?.attributes?.swagPng?.data?.attributes?.formats?.small?.url
+    const thumbnail =  getGoogleMedia(content?.content?.attributes?.swagPng?.data?.attributes?.formats?.small?.url)
     console.log("img url: ", thumbnail)
     return (
       <Container maxW={'7xl'}>
         <SimpleGrid
-          columns={{ base: 1, lg: 2 }}
-          spacing={{ base: 8, md: 10 }}
-          py={{ base: 18, md: 24 }}>
+          columns={{ base: 1, md: 2 }}
+          spacing={{ base: 1, md: 10 }}
+          py={{ base: 6, md: 10 }}>
           <Flex>
             <Image
               rounded={'md'}
@@ -73,6 +74,8 @@ import {
                   {content?.content?.attributes?.swagDescription}
                 </Text>
               </VStack>
+              <ColorPicker/>
+              <FileUpload/>
             </Stack>
   
             <Button

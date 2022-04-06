@@ -4,24 +4,33 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import "tailwindcss/tailwind.css";
 import { getStrapiURL } from "../utils";
 import { getLocalizedParams } from "../utils/localize";
-import { ChakraProvider } from '@chakra-ui/react'
-
+import { ChakraProvider, Button } from '@chakra-ui/react'
+import { useWeb3React, Web3ReactProvider } from '@web3-react/core'
+import { Web3Provider } from '@ethersproject/providers'
+import { ethers } from 'ethers'
+import { InjectedConnector, NoEthereumProviderError, UserRejectedRequestError } from '@web3-react/injected-connector'
+import Web3Modal from "web3modal";
+import WalletConnectProvider from "@walletconnect/web3-provider"; 
+import getLibrary from "../utils/getLibrary";
+import { useEagerConnect } from "../utils/hooks";
 
 const queryClient = new QueryClient();
-
 function MyApp({ Component, pageProps }) {
   const { global } = pageProps;
   if (global === null) {
     return <ErrorPage statusCode={404} />;
   }
-
+  
   return (
     <>
-      <ChakraProvider>
-        <QueryClientProvider client={queryClient}>
-          <Component {...pageProps} />
-        </QueryClientProvider>  
-      </ChakraProvider>
+      <Web3ReactProvider getLibrary={getLibrary}>
+        <ChakraProvider>
+          <QueryClientProvider client={queryClient}>
+            <Component {...pageProps}>
+            </Component>
+          </QueryClientProvider>  
+        </ChakraProvider>
+      </Web3ReactProvider>
     </>
   );
 }

@@ -45,6 +45,30 @@
     },
     "destinationUrl": {
       "type": "string"
+    },
+    "isTokenGated": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "isOnOpenSea": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "isMintable": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "contractAddress": {
+      "type": "string"
+    },
+    "openSeaUrl": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
     }
   }
 }

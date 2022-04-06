@@ -12,22 +12,20 @@ import Layout from "../../components/layout";
 import { getSwags, initialData } from "../../utils";
 import { GridItem, SimpleGrid } from "@chakra-ui/react";
 import SwagCard from "../../components/pages/swag/swagCard";
+import SwagCardSkeleton from "../../components/pages/swag/swagCardSkeleton";
 
 
 export default function index() {
 const { data, isLoading, error, status } = useQuery(['swags'],
-    getSwags,
-    {
-        initialData,
-    }
+    getSwags
     );
     //console.log(data,status)
 
     //const swagItems = data? data.swags.map(function(swag){return <li key = {swag.ID}>{swag.swagName}</li>}) : <li key = {1}>loading...</li>
   return (
     <Layout>
-        <SimpleGrid mt = {6} columns = {3}>
-        {isLoading? (<GridItem>loading data</GridItem>): (data.swags.map(function(swag){return <SwagCard key = {swag.id} swagItem = {swag}/>}))}
+        <SimpleGrid mt = {6} columns = {{ base: 1, md: 3 }}>
+        {isLoading? ([...Array(9)].map((e) => <SwagCardSkeleton key={e}/>)): (data.swags.map(function(swag){return <SwagCard key = {swag.id} swagItem = {swag}/>}))}
         </SimpleGrid>
     </Layout>
   )

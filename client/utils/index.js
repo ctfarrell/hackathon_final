@@ -10,6 +10,16 @@ export function getStrapiMedia(url) {
   return `${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:1337'}${url}`;
 }
 
+export function getGoogleMedia(url){
+  if(url==null){
+    return null;
+  }
+  if (url.startsWith('http') || url.startsWith('//')) {
+    return url;
+  }
+  return `${process.env.NEXT_PUBLIC_STORAGE_URL || 'http://localhost:1337'}${url}`;
+}
+
 export function getStrapiURL(path) {
   return `${
     process.env.NEXT_PUBLIC_API_URL || 'http://localhost:1337'
@@ -131,7 +141,7 @@ export async function getSwag(swagId) {
 export async function getSwags() {
 
   let baseUrl = getStrapiURL(
-    `/swags?pagination[limit]=10&pagination[start]=0&pagination[withCount]=true&populate=*`
+    `/swags?populate=*`
   );
 /*
   if (categoryName) {
@@ -144,14 +154,97 @@ export async function getSwags() {
 
   return {
     swags: swag.data,
-    count: swag.meta.pagination.total,
+    meta: swag.meta
   };
 }
 
+export async function getActiveSwagFromSlug(slug) {
+  let baseUrl = getStrapiURL(
+    `/active-swags?filters[slug][$eq]=${slug}`
+  );
+
+  const res = await fetch(baseUrl);
+  const swag = await res.json();
+
+  return {
+    swags: swag.data,
+    meta: swag.meta
+  };
+}
+
+
+export async function createActiveSwag(data) {
+
+  let baseUrl = getStrapiURL(
+    `/active-swags`
+  );
+
+  const res = await fetch(baseUrl,{
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data) // body data type must match "Content-Type" header
+  });
+  const swag = await res.json();
+
+  return {
+    swags: swag.data,
+    meta: swag.meta
+  };
+}
+
+export async function updateActiveSwag(id, data) {
+
+  let baseUrl = getStrapiURL(
+    `/active-swags/${id}`
+  );
+
+  const res = await fetch(baseUrl,{
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data) // body data type must match "Content-Type" header
+  });
+  const swag = await res.json();
+
+  return {
+    swags: swag.data,
+    meta: swag.meta
+  };
+}
+
+export async function getActiveSwags() {
+
+  let baseUrl = getStrapiURL(
+    `/active-swags?populate=*_limit=-1`
+  );
+
+  const res = await fetch(baseUrl);
+  const swag = await res.json();
+
+  return {
+    swags: swag.data,
+    meta: swag.meta
+  };
+}
+
+export async function getExperience(slug) {
+  let baseUrl = getStrapiURL(
+    `/experiences?filters[slug]$eq=${slug}&populate=*`
+  )
+  const res = await fetch(baseUrl);
+  const exp = await res.json();
+
+  return {
+    experience: exp.data,
+  }
+}
 export async function getExperiences() {
 
   let baseUrl = getStrapiURL(
-    `/experiences?pagination[limit]=10&pagination[start]=0&pagination[withCount]=true&populate=*`
+    `/experiences?populate=*`
   );
 /*
   if (categoryName) {

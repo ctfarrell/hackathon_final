@@ -9,7 +9,7 @@ import RestaurantCard from "../../components/pages/restaurant/RestaurantCard";
 import BlockManager from "../../components/shared/BlockManager";
 import Container from "../../components/shared/Container";
 import Header from "../../components/shared/Header";
-import { getData, getSwags, getSwag, initialData, getStrapiURL } from "../../utils";
+import { getExperiences, getSwags, getSwag, initialData, getStrapiURL } from "../../utils";
 import { getLocalizedParams } from "../../utils/localize";
 import SwagCustomize from "../../components/pages/swag/swagCustomize";
 
@@ -17,7 +17,7 @@ import SwagCustomize from "../../components/pages/swag/swagCustomize";
 export default function SwagItem({ content, preview }) {
   const router = useRouter()
   if (!router.isFallback && !content?.attributes) {
-    return <div> Sorry Weve had an Error</div>
+    return <div> Sorry We had an Error</div>
   }
   return(
   <Layout>
@@ -72,6 +72,7 @@ export default function SwagItem({ content, preview }) {
   
   export async function getStaticPaths() {
     const data = await getSwags()
+    console.log("all data: ", data)
     const swagPaths = data.swags.map((swag) => `/swag/${swag.attributes.swagId}`)
     console.log("all swags: ", swagPaths)
     return {

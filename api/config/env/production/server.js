@@ -1,5 +1,3 @@
-module.exports = {
-    admin: {
-      path: '/strapi',
-    },
-  };
+module.exports = ({ env }) => ({
+  url: env('https://intrinsic-backend.herokuapp.com/'),
+});

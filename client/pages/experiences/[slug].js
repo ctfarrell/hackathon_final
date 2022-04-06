@@ -9,23 +9,48 @@ import RestaurantCard from "../../components/pages/restaurant/RestaurantCard";
 import BlockManager from "../../components/shared/BlockManager";
 import Container from "../../components/shared/Container";
 import Header from "../../components/shared/Header";
-import { getData, getSwags, getSwag, initialData, getStrapiURL } from "../../utils";
+import { getData, getExperiences, getExperience, initialData, getStrapiURL } from "../../utils";
 import { getLocalizedParams } from "../../utils/localize";
-import SwagCustomize from "../../components/pages/swag/swagCustomize";
-
+import ExperienceDetails from "../../components/pages/experiences/experienceDetails";
 
 export default function SwagItem({ content, preview }) {
   const router = useRouter()
   if (!router.isFallback && !content?.attributes) {
-    return <div> Sorry Weve had an Error</div>
+    return <div> Sorry We had an Error</div>
   }
   return(
   <Layout>
     <>
-      <div>Cool Experience Details</div>
+      <ExperienceDetails content = {content}/>
     </>
   </Layout>
   )
+  }
+
+  export async function getStaticProps({ params, preview = null }) {
+    console.log("getting exprience page data")
+    console.log("exp static props", params.slug)
+    const expData = await getExperience(params.slug)
+    console.log({expData})
+    const content = expData.experience[0]
+    console.log("expData: ", content)
+    return {
+      props: {
+        preview,
+        content,
+        },
+      }
+    }
+  
+  export async function getStaticPaths() {
+    const data = await getExperiences()
+    console.log("all data: ", data)
+    const expPaths = data.experiences.map((exp) => `/experiences/${exp.attributes.slug}`)
+    console.log("all exps: ", expPaths)
+    return {
+      paths: expPaths || [],
+      fallback: false,
+    }
   }
   
   /*
@@ -57,6 +82,7 @@ export default function SwagItem({ content, preview }) {
     return { props: { swagDetails } }
   }
   */
+ /*
   export async function getStaticProps({ params, preview = null }) {
     console.log(params.slug)
     const swagData = await getSwag(params.slug)
@@ -79,4 +105,5 @@ export default function SwagItem({ content, preview }) {
       fallback: false,
     }
   }
+  */
   

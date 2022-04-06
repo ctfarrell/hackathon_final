@@ -10,11 +10,11 @@ import {
     Link,
   } from '@chakra-ui/react';
   import { ArrowForwardIcon } from '@chakra-ui/icons';
+  import { getGoogleMedia } from '../../../../utils';
   
   export default function SwagCard(swag) {
       //console.log(swag.swagItem)
-      const url_starter = "http://localhost:1337"
-      const thumbnail =  url_starter +  swag?.swagItem?.attributes?.swagPng?.data?.attributes?.formats?.small?.url 
+      const thumbnail =  getGoogleMedia(swag?.swagItem?.attributes?.swagPng?.data?.attributes?.formats?.small?.url)
       //console.log(thumbnail)
     return (
       <Center mx={6} my={2} py={12}>
@@ -59,17 +59,17 @@ import {
             />
           </Box>
           <Stack pt={10} align={'center'}>
-            <Heading fontSize={'xl'} fontFamily={'body'} fontWeight={500} isTruncated noOfLines = {1}>
+            <Heading maxWidth = '100%' fontSize={'xl'} fontFamily={'body'} fontWeight={500} isTruncated>
               {swag.swagItem.attributes.swagName}
             </Heading>
             <Text color={'gray.500'} fontSize={'sm'} textTransform={'uppercase'} isTruncated>
               {swag.swagItem.attributes.swagType}
             </Text>
-            <Button rightIcon={<ArrowForwardIcon />} m = {'auto'} colorScheme='pink' variant='solid'>
-                <Link href={"swag/" + swag.swagItem.attributes.swagId} >
-                Customize
-                </Link>
-            </Button>
+            <Link href={"swag/" + swag.swagItem.attributes.swagId} >
+              <Button rightIcon={<ArrowForwardIcon />} m = {'auto'} colorScheme='pink' variant='solid'>
+                  Customize
+              </Button>
+            </Link>
           </Stack>
         </Box>
       </Center>

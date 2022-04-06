@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "active_swags",
+  "info": {
+    "singularName": "active-swag",
+    "pluralName": "active-swags",
+    "displayName": "ActiveSwag",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "tokenId": {
+      "type": "integer",
+      "required": true
+    },
+    "emailSent": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "tokenClaimed": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "slug": {
+      "type": "uid",
+      "required": true
+    },
+    "address": {
+      "type": "string"
+    },
+    "txHash": {
+      "type": "string"
+    }
+  }
+}

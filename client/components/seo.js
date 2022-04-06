@@ -11,7 +11,7 @@ const Seo = ({ seo }) => {
 
   return (
     <Head>
-      <title>{metaTitle}</title>
+      <title>Intrinsic Experiences</title>
       <meta name="description" content={metaDescription} key="description" />
       <meta
         name="twitter:card"
