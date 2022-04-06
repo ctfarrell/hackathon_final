@@ -47,13 +47,13 @@ We used a ton of neat open source :rocket: technology for our project!
 **Non-Dev Resources**
 * [Blender](https://www.blender.org/) - We used Blender as our 3d modeling tool to create the hackathon T-Shirts :tshirt: 
 * [Decentraland](https://decentraland.org/) - Decentraland and the DAO were helpful in approving our shirts and providing tons of [resources](https://github.com/decentraland/avatar-assets) for building them!
-<p align="center" style = "width: 50%;">
-  <img src="https://github.com/ctfarrell/hackathon_final/blob/main/intrinsic_swag.gif" alt="gif ..." />
+<p align="center" >
+  <img src="https://github.com/ctfarrell/hackathon_final/blob/main/intrinsic_swag.gif" style = "width: 50%;" alt="gif ..." />
 </p>
 
 * [Spatial.io](https://spatial.io/) - Spatial was another excellent metaverse platform we used and has the best avatar generator out there! 
-<p align="center" style = "width: 50%;">
-  <img src="https://github.com/ctfarrell/hackathon_final/blob/main/spatial_meeting.png" alt="image ..." />
+<p align="center" >
+  <img src="https://github.com/ctfarrell/hackathon_final/blob/main/spatial_meeting.png" style = "width: 50%;" alt="image ..." />
 </p>
 
 * [Canva](https://www.canva.com/) - was our all-in-one video editor / image editor / presentation tool creator :frame_with_picture: 
