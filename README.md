@@ -4,18 +4,12 @@ title: 'Team Intrinsic Hackathon Project'
 
 # Team Intrinsic Hackathon Project
 
-
-
-![chat](https://img.shields.io/discord/920017222645186680)
+![chat](https://img.shields.io/discord/:920017222645186680.svg)
 
 Website [Link](https://intrinsic-client.herokuapp.com/) 
 <p align="center">
   <img src="https://github.com/ctfarrell/hackathon_final/blob/main/intrinsic-home.png" alt="image ..." />
 </p>
-
-## Table of Contents
-
-[TOC]
 
 # Presentation
 We used Canva for our Final Presentation [Canva Link](https://www.canva.com/design/DAE60MKQhvk/ZwLFoLS5c7E-6eHG7sQqng/view?utm_content=DAE60MKQhvk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
@@ -57,12 +51,12 @@ We used a ton of neat open source :rocket: technology for our project!
 **Non-Dev Resources**
 * [Blender](https://www.blender.org/) - We used Blender as our 3d modeling tool to create the hackathon T-Shirts :tshirt: 
 * [Decentraland](https://decentraland.org/) - Decentraland and the DAO were helpful in approving our shirts and providing tons of [resources](https://github.com/decentraland/avatar-assets) for building them!
-<p align="center">
+<p align="center" style = "{width: 50%}">
   <img src="https://github.com/ctfarrell/hackathon_final/blob/main/intrinsic_swag.gif" alt="gif ..." />
 </p>
 
 * [Spatial.io](https://spatial.io/) - Spatial was another excellent metaverse platform we used and has the best avatar generator out there! 
-<p align="center">
+<p align="center" style = "{width: 50%}">
   <img src="https://github.com/ctfarrell/hackathon_final/blob/main/spatial_meeting.png" alt="image ..." />
 </p>
 
