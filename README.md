@@ -1,14 +1,12 @@
 # Team Intrinsic Hackathon Project
+Website Link - [https://intrinsic-client.herokuapp.com/](https://intrinsic-client.herokuapp.com/) 
 
-![chat](https://img.shields.io/discord/920017222645186680)
-
-Website [Link](https://intrinsic-client.herokuapp.com/) 
 <p align="center">
   <img src="https://github.com/ctfarrell/hackathon_final/blob/main/intrinsic-home.png" alt="image ..." />
 </p>
 
 # Presentation
-We used Canva for our Final Presentation [Canva Link](https://www.canva.com/design/DAE60MKQhvk/ZwLFoLS5c7E-6eHG7sQqng/view?utm_content=DAE60MKQhvk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+We used Canva for our [Final Presentation](https://www.canva.com/design/DAE60MKQhvk/ZwLFoLS5c7E-6eHG7sQqng/view?utm_content=DAE60MKQhvk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 ### Key Website Features 
 * Token Gated and Free Metaverse [Experiences](https://intrinsic-client.herokuapp.com/experiences)
@@ -16,8 +14,8 @@ We used Canva for our Final Presentation [Canva Link](https://www.canva.com/desi
 * Claim Your Free Hackathon T-Shirt [HERE](https://intrinsic-client.herokuapp.com/hackathon)
 -- Hackathon T-Shirt [Dashboard](https://intrinsic-client.herokuapp.com/hackathon/dash)
 
-<p align="center" style = "width: 50%;">
-  <img src="https://github.com/ctfarrell/hackathon_final/blob/main/doge_shirt.jpeg" alt="image ..." />
+<p align="center">
+  <img src="https://github.com/ctfarrell/hackathon_final/blob/main/doge_shirt.jpeg" style = "width: 50%;" alt="image ..." />
 </p>
 
 # Development Files
@@ -28,7 +26,7 @@ All the development files are right here in this repo!
 4. create an account at `http://localhost:1337/admin`
 5. Add some swags and some experiences and you're all set!
 
-For more details checkout the [client readme](https://github.com/ctfarrell/hackathon_final/tree/main/client) and the [api readme](https://github.com/ctfarrell/hackathon_final/tree/main/api) for more details!
+Checkout the [client readme](https://github.com/ctfarrell/hackathon_final/tree/main/client) and the [api readme](https://github.com/ctfarrell/hackathon_final/tree/main/api) for more details!
 # Tech Stack
 We used a ton of neat open source :rocket: technology for our project!
  * [Strapi](https://strapi.io/) was our backend framework, and we used their demo [FoodAdvisor](https://github.com/strapi/foodadvisor) app as a starting point :ice_cream: 
@@ -40,15 +38,15 @@ We used a ton of neat open source :rocket: technology for our project!
  * [Alchemy](https://www.alchemy.com/) - Was our node provider for our backend service, we tried a few others - but Alchemy was super easy. :sparkles: 
  * [PostgreSQL](https://www.postgresql.org/) - Was our database provider, and Strapi Docs + the Heroku Plugin made deployment a breeze. :bookmark_tabs: 
  * [web3-react](https://github.com/NoahZinsmeister/web3-react) - made maintaining wallet state across our app super easy as well as gave us a handy error to catch users logging into the wrong chain. :walking: 
- * [OpenZepplin](https://openzeppelin.com/) - Open Zepplin's ERC-721 Contract Wizard and docs made it super simple to create a simple token gating portal in a couple of hours when we had a teammate come down sick :biohazard_sign: 
- * [Remix](https://remix.ethereum.org/) - Open Zepplin lets you open your contracts from their wizard into Remix. From Remix we were able to easily compile and deploy to polygon. :dagger_knife: 
+ * [OpenZepplin](https://openzeppelin.com/) - Open Zepplin's ERC-721 Contract Wizard and docs made it super simple to create a simple token gating portal in a couple of hours when we had a teammate come down sick :cold_sweat: 
+ * [Remix](https://remix.ethereum.org/) - Open Zepplin lets you open your contracts from their wizard into Remix. From Remix we were able to easily compile and deploy to polygon. :boom: 
  * [Mailgun](https://www.mailgun.com/) - Handy service for sending emails via API! :gun: 
 
 **Non-Dev Resources**
 * [Blender](https://www.blender.org/) - We used Blender as our 3d modeling tool to create the hackathon T-Shirts :tshirt: 
 * [Decentraland](https://decentraland.org/) - Decentraland and the DAO were helpful in approving our shirts and providing tons of [resources](https://github.com/decentraland/avatar-assets) for building them!
 <p align="center" >
-  <img src="https://github.com/ctfarrell/hackathon_final/blob/main/intrinsic_swag.gif" style = "width: 50%;" alt="gif ..." />
+  <img src="https://github.com/ctfarrell/hackathon_final/blob/main/intrinsic_swag.gif" style = "width: 25%;" alt="gif ..." />
 </p>
 
 * [Spatial.io](https://spatial.io/) - Spatial was another excellent metaverse platform we used and has the best avatar generator out there! 
@@ -56,7 +54,7 @@ We used a ton of neat open source :rocket: technology for our project!
   <img src="https://github.com/ctfarrell/hackathon_final/blob/main/spatial_meeting.png" style = "width: 50%;" alt="image ..." />
 </p>
 
-* [Canva](https://www.canva.com/) - was our all-in-one video editor / image editor / presentation tool creator :frame_with_picture: 
+* [Canva](https://www.canva.com/) - was our all-in-one video editor / image editor / presentation tool creator :tulip: 
 
 
 # Meeting Dates
@@ -71,21 +69,21 @@ We used a ton of neat open source :rocket: technology for our project!
 
 # Lessons Learned
 1. Don't show up to a hackathon with a working solution :wink: 
--- I'm kidding, mostly. It sounds like the changes ya'll are planning for next year are positive.
-2. Consider the judges! :female-judge: :male-judge: 
--- Taking a step back, I probably should have considered a hackathon at a business school wouldn't be won by the team with a technical solution... but here we are! 
--- We knew who the judges would be ahead of time, and maybe could have changed our presentation to suit them better.
+   - I'm kidding, mostly. It sounds like the changes ya'll are planning for next year are positive.
+2. Consider the judges! :crystal_ball: 
+   - Taking a step back, I probably should have considered a hackathon at a business school wouldn't be won by the team with a technical solution... but here we are! 
+   - We knew who the judges would be ahead of time, and maybe could have changed our presentation to suit them better.
 3. I could be better at changing folks minds :sandwich:
--- I spent a lot of time trying to convince my team to give up our use case and create our own metaverse focused business case. 
--- I was unsuccessful and as a result we spent a lot of our presentation explaining Center for Creators, the organization we were working with.
--- I think that hurt us a bit in the end.
+   - I spent a lot of time trying to convince my team to give up our use case and create our own metaverse focused business case. 
+   - I was unsuccessful and as a result we spent a lot of our presentation explaining Center for Creators, the organization we were working with.
+   - I think that hurt us a bit in the end.
 5. I learned a lot about software deployment / architecture - things I did for the first time in this hackathon: 
---- Deploy a solution to Heroku
---- Use Google Cloud Storage
---- Rolled my own PostgreSQL Database
---- Send Emails through an API
---- Run integrated frontend / backend services
---- Bought a domain name
---- Created an E2E user flow
---- Designed any sort of 3D Model
---- Created my own NFTs on a production blockchain
+   - Deploy a solution to Heroku
+   - Use Google Cloud Storage
+   - Rolled my own PostgreSQL Database
+   - Send Emails through an API
+   - Run integrated frontend / backend services
+   - Bought a domain name
+   - Created an E2E user flow
+   - Designed any sort of 3D Model
+   - Created my own NFTs on a production blockchain
